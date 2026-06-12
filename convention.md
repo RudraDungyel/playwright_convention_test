@@ -636,14 +636,6 @@ export function listenForApiResponse(
   );
 }
 ```
-
-```ts
-await simulationSolutionReady(opportunityId);
-await simulationBcApproval(opportunityId);
-await page.reload();
-await expect(page.getByText('BC Approved')).toBeVisible();
-```
-
 ---
 
 ## 11. Parallelism, retries, sharding
