@@ -2,8 +2,6 @@
 
 Cross-project conventions for Playwright E2E suites at Selise. Distilled from Playwright's [official best practices](https://playwright.dev/docs/best-practices) and proven patterns from `sbh-e2e`. Adopt when starting a new suite; reach for it when reviewing PRs.
 
-> **Tooling baseline:** `@playwright/test` ≥ 1.58, Node 20+, yarn 4 (corepack-managed), TypeScript strict mode.
-
 ---
 
 ## Reference project structure
