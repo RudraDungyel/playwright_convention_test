@@ -70,7 +70,6 @@ apps/<project>-e2e/
 - Spec files: `snake_case.spec.ts`. Page object files: `snake_case.ts`. Module folder names: `PascalCase` (or however the FE module is named).
 - One feature flow per spec file. Don't dump unrelated tests into one file just because they share a module.
 - **Never** put selectors or test logic in a spec file. Specs orchestrate; page objects act. Specs should read like a checklist.
-- Per-suite conventions that diverge from this doc (specific business data, custom helpers, project-only flows) live in `apps/<project>-e2e/CONVENTIONS.md`. This doc is the cross-project baseline.
 
 ---
 
