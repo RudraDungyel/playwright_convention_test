@@ -240,8 +240,6 @@ Now `getByTestId` resolves `data-cy`. Tests stay consistent across the suite:
 await page.getByTestId('submitButton').click();   // resolves [data-cy="submitButton"]
 ```
 
-This is the right setup for `sbh-e2e` — existing `data-cy` attributes everywhere, zero FE churn, tests use Playwright's idiomatic locator.
-
 ### Rules (apply to whichever attribute you chose)
 
 - **One project, one attribute.** Don't mix `data-cy` and `data-testid` in the same suite.
