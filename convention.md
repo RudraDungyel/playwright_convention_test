@@ -102,7 +102,7 @@ apps/<project>-e2e/
 
 ## 1. Code style & naming
 
-Use **camelCase** for variables, functions, methods, class members, and test ID values (`data-testid` / `data-cy`).
+Use **camelCase** for variables, functions, methods and class members.
 
 ```ts
 let fooVar;
