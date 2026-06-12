@@ -1038,65 +1038,7 @@ steps:
 
 ---
 
-## 19. Linting
-
-Use Playwright's official ESLint plugin:
-
-```bash
-yarn add -D eslint-plugin-playwright
-```
-
-```js
-// eslint.config.mjs
-import playwright from 'eslint-plugin-playwright';
-
-export default [
-  playwright.configs['flat/recommended'],
-  // ... your other configs
-];
-```
-
-The plugin catches:
-- `expect().toBe(true)` instead of `toBeVisible()` (race-y).
-- `waitForTimeout` usage.
-- Conditional `test()` calls.
-- Missing `await` on Playwright APIs.
-
-Run lint in CI **before** tests — catches issues without paying for a full E2E run.
-
----
-
-## 20. rsync deployment
-
-Office QA server (intermediate hop → internal):
-
-```bash
-rsync -a --progress <folder> qa:/home/qa/int/ && \
-  ssh qa "rsync -a /home/qa/int/<folder> qa:/home/ubuntu/<project>/"
-```
-
-Tech server (DigitalOcean):
-
-```bash
-rsync -a --progress <project-directory> root@<server-ip>:/root/<project>/
-```
-
-Access:
-
-```bash
-# Office
-ssh qa
-cd <project>
-
-# Tech
-ssh root@<server-ip> -v
-```
-
-**Never** rsync secrets. `playwright.env.json` belongs on the server already (or sourced from a secret manager), not pushed from a laptop.
-
----
-
-## 21. Pull request convention
+## 19. Pull request convention
 
 ### Branch name
 
@@ -1144,7 +1086,7 @@ Merge Date: 15-06-2026
 
 ---
 
-## 22. Quick reference
+## 20. Quick reference
 
 | Task | Command |
 |---|---|
