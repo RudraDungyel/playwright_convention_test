@@ -333,7 +333,7 @@ export default defineConfig({
 
 | Setting | Rationale |
 |---|---|
-| `retries: 0` (global) | Feature tests must fail loudly. Retries hide real bugs. |
+| `retries: 0` (global) | Feature tests must fail loudly. Retries takes more time to run tests in CI. |
 | `retries: 3` on `setup` | SSO / TOTP / federation can transiently flake. Tolerate there, nowhere else. |
 | `workers: 4` in CI | Sweet spot for most apps. Tune up only if you have shard-safe test data. |
 | `fullyParallel: true` | Tests within a file also parallelise. |
