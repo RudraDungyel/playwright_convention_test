@@ -942,13 +942,9 @@ Open the report:
 npx playwright show-report
 ```
 
-### Custom reporter
+### Custom reporter (optional)
 
-For client-friendly artifacts (CSV, summary HTML), implement a custom reporter under `src/reporters/`. Pattern:
-
-1. Aggregate per-test data in `onTestEnd` (push to an array).
-2. Write files in `onEnd` (single fs flush).
-3. **Sort rows by `(module, test)`** before writing — keeps the report diff-stable across nightly runs (otherwise rows shuffle by completion order under parallel workers).
+For client-friendly artifacts (CSV, summary HTML), implement a custom reporter under `src/reporters/`.
 
 ---
 
