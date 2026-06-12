@@ -637,10 +637,6 @@ export function listenForApiResponse(
 }
 ```
 
-### Backend simulation
-
-For flows that wait on backend state changes (approvals, status transitions), call simulation endpoints rather than polling the UI:
-
 ```ts
 await simulationSolutionReady(opportunityId);
 await simulationBcApproval(opportunityId);
